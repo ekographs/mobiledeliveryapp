@@ -11,8 +11,17 @@ class OrderCard extends StatelessWidget{
             width: 46.0,
             child: Column(
               children: <Widget>[
+                InkWell(
+                  onTap:(){},
+                    child:
                 Icon(Icons.keyboard_arrow_up),
-                Icon(Icons.keyboard_arrow_down)
+                ),
+                Text("0"),
+                InkWell(
+                  onTap:(){},
+                  child:
+                  Icon(Icons.keyboard_arrow_down),
+                ),
               ],
             ),
           )
