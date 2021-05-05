@@ -1,4 +1,3 @@
-import 'dart:html';
 
 import 'package:deliverysystem/src/widget/package_card.dart';
 import 'package:deliverysystem/src/widget/package_category.dart';
