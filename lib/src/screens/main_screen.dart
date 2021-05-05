@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 //Pages
 import '../pages/home_page.dart';
+import '../pages/order_page.dart';
+import '../pages/favorite_page.dart';
+import '../pages/profile_page.dart';
 
 
 class MainScreen extends StatefulWidget{
@@ -17,6 +20,9 @@ class _MainScreenState extends State<MainScreen>{
   Widget currentPage;
 
   HomePage homePage;  //creating an instance for home page
+  OrderPage orderPage;
+  ProfilePage profilePage;
+  FavoritePage favoritePage;
 
   //initializing the pages
   @override
@@ -24,7 +30,10 @@ class _MainScreenState extends State<MainScreen>{
     // TODO: implement initState
     super.initState();
     homePage = HomePage();
-    pages = [homePage];
+    orderPage = OrderPage();
+    favoritePage = FavoritePage();
+    profilePage = ProfilePage();
+    pages = [homePage, orderPage, favoritePage, profilePage,];  //arrays of pages
 
 
     currentPage = homePage;
