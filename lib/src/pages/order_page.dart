@@ -8,8 +8,11 @@ class OrderPage extends StatefulWidget{
 class _OrderPageState extends State<OrderPage>{
   @override
   Widget build(BuildContext context){
-    return Center(
-      child: Text("Order Page"),
+    return ListView(
+      scrollDirection: Axis.vertical,
+      children: <Widget>[
+        
+      ],
     );
 
   }
