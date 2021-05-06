@@ -41,13 +41,13 @@ class OrderCard extends StatelessWidget{
                   fit: BoxFit.cover,
                 ),
                 borderRadius: BorderRadius.circular(40.0),
-                boxShadow: [
+                boxShadow:[
                   BoxShadow(
                     color: Colors.black,
                     blurRadius: 6.0,
                     offset: Offset(0.0, 6.0),
                   ),
-                ]
+                ],
               ),
             ),
           ],
