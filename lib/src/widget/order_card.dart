@@ -7,6 +7,7 @@ class OrderCard extends StatelessWidget{
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Container(
               height: 76.0,
@@ -49,6 +50,31 @@ class OrderCard extends StatelessWidget{
                   ),
                 ],
               ),
+            ),
+            SizedBox(width: 20.0,),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text("Kfc Fiver Chicken", style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),),
+                SizedBox(height: 6.0,),
+                Text("300 rs", style: TextStyle(color: Colors.deepOrange, fontSize: 16.0),),
+                SizedBox(height: 6.0,),
+                Container(
+                  height: 24.0,
+                  width: 120.0,
+                  color: Colors.cyan,
+                  child: ListView(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Text("Zinger Meal",),
+                          Text("x"),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ],
         ),
