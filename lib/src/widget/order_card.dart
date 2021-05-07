@@ -62,20 +62,59 @@ class OrderCard extends StatelessWidget{
                 Container(
                   height: 24.0,
                   width: 120.0,
-                  color: Colors.cyan,
+                  // color: Colors.cyan,
                   child: ListView(
+                    scrollDirection: Axis.horizontal,
                     children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Text("Zinger Meal",),
-                          Text("x"),
-                        ],
+                      Container(
+                        margin: EdgeInsets.only(right: 10.0),
+                        child: Row(
+                          children: <Widget>[
+                            Text("Zinger Meal", style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold),),
+                            SizedBox(width: 6.0,),
+                            Text("x", style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 10.0),
+                        child: Row(
+                          children: <Widget>[
+                            Text("Zinger Meal", style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold),),
+                            SizedBox(width: 6.0,),
+                            Text("x", style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        margin: EdgeInsets.only(right: 10.0),
+                        child: Row(
+                          children: <Widget>[
+                            Text("Zinger Meal", style: TextStyle(color: Colors.blueGrey, fontWeight: FontWeight.bold),),
+                            SizedBox(width: 6.0,),
+                            InkWell(
+                              onTap: (){},
+                                child: Text("x",
+                                  style: TextStyle(
+                                      color: Colors.red,
+                                      fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
                 ),
               ],
             ),
+            Spacer(),
+            GestureDetector(
+              onTap: (){},
+                child: Icon(Icons.cancel, color: Colors.brown,),
+            ),
+
           ],
         ),
       ),
