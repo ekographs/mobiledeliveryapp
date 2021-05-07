@@ -1,3 +1,4 @@
+import 'package:deliverysystem/src/pages/login_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -27,10 +28,6 @@ class _OrderPageState extends State<OrderPage>{
           children: <Widget>[
             OrderCard(),
             OrderCard(),
-            OrderCard(),
-            OrderCard(),
-            OrderCard(),
-            OrderCard(),
             _BuildCartTotal()
           ],
         ),
@@ -42,8 +39,10 @@ class _OrderPageState extends State<OrderPage>{
 Widget _BuildCartTotal(){
     return Container(
       height: 250.0,
-      margin: EdgeInsets.only(top: 22.0),
-      padding: EdgeInsets.symmetric(horizontal: 30.0),
+      padding: EdgeInsets.only(
+        left: 10.0,
+        right: 10.0,
+      ),
       child: Column(
         children: <Widget>[
           // ListTile(
@@ -90,19 +89,26 @@ Widget _BuildCartTotal(){
             ],
           ),
           SizedBox(height: 22.0,),
-          Container(
-            width: MediaQuery.of(context).size.width,
-            height: 52.0,
-            decoration: BoxDecoration(
-              color: Colors.deepOrange,
-              borderRadius: BorderRadius.circular(40.0),
-            ),
-            child: Center(
-              child: Text("Proceed to Checkout",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
+            },
+            child: Container(
+              height: 52.0,
+              decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: BorderRadius.circular(40.0),
+              ),
+              child: Center(
+                child: Text("Proceed to Checkout",
+                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.white ),
+                ),
               ),
             ),
           ),
+          SizedBox(
+            height: 20.0,
+          )
         ],
       ),
     );
