@@ -13,22 +13,37 @@ class OrderPage extends StatefulWidget{
 class _OrderPageState extends State<OrderPage>{
   @override
   Widget build(BuildContext context){
-    return ListView(
-        padding: EdgeInsets.symmetric(horizontal: 10.0),
-        scrollDirection: Axis.vertical,
-        children: <Widget>[
-          OrderCard(),
-          OrderCard(),
-          _BuildCartTotal(),
-        ],
-      );
+    return Scaffold(
+      appBar: AppBar(
+    title: Text(" Your Orders Cart"),
+    centerTitle: true,
+    backgroundColor: Colors.orange,
+    elevation: 0.0,
+    ),
+
+      body: ListView(
+          padding: EdgeInsets.symmetric(horizontal: 10.0),
+          scrollDirection: Axis.vertical,
+          children: <Widget>[
+            OrderCard(),
+            OrderCard(),
+            OrderCard(),
+            OrderCard(),
+            OrderCard(),
+            OrderCard(),
+            _BuildCartTotal()
+          ],
+        ),
+    );
 
   }
   // Building a method for total cart price
 
 Widget _BuildCartTotal(){
     return Container(
+      height: 250.0,
       margin: EdgeInsets.only(top: 22.0),
+      padding: EdgeInsets.symmetric(horizontal: 30.0),
       child: Column(
         children: <Widget>[
           // ListTile(

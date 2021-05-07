@@ -72,12 +72,6 @@ class _MainScreenState extends State<MainScreen>{
         ],
       ) ,
       body: currentPage,
-      appBar: currentTabIndex == 1? AppBar(
-        title: Text(" Your Orders Cart"),
-        centerTitle: true,
-        backgroundColor: Colors.orange,
-        elevation: 0.0,
-      ): null,
     );
   }
 }
