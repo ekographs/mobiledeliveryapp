@@ -44,8 +44,42 @@ class _LoginPageState extends  State<LoginPage>{
                     color: Colors.white,
                     borderRadius: BorderRadius.only(topLeft: Radius.circular(70), topRight: Radius.circular(70)),
                   ),
+                  child: Padding(
+                    padding: EdgeInsets.all(30),
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(height: 62.0,),
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [BoxShadow(
+                            color: Color.fromRGBO(225, 95, 27, .3),
+                            blurRadius: 30,
+                            offset: Offset(0,10)
+                          )]
+                        ),
+                        child: Column(
+                          children: <Widget> [
+                            Container(
+                              decoration: BoxDecoration(
+                                border: Border(bottom: BorderSide(color: Colors.blueGrey[200]))
+                              ),
+                              child: TextField(
+                                decoration: InputDecoration(
+                                  hintText: "Username or Email",
+                                ),
+                              ),
+                            )
+                          ],
+                        ),
+                      ),
+                    ]
+                  ),
                 ),
-            )
+            ),
+            ),
           ],
       ),
       ),

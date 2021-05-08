@@ -28,6 +28,8 @@ class _OrderPageState extends State<OrderPage>{
           children: <Widget>[
             OrderCard(),
             OrderCard(),
+            OrderCard(),
+            OrderCard(),
             _BuildCartTotal()
           ],
         ),
@@ -94,10 +96,10 @@ Widget _BuildCartTotal(){
               Navigator.of(context).push(MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
             },
             child: Container(
-              height: 52.0,
+              height: 60.0,
               decoration: BoxDecoration(
                 color: Colors.deepOrange,
-                borderRadius: BorderRadius.circular(40.0),
+                borderRadius: BorderRadius.circular(70.0),
               ),
               child: Center(
                 child: Text("Proceed to Checkout",
