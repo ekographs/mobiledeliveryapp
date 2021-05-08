@@ -96,7 +96,7 @@ Widget _BuildCartTotal(){
             child: Container(
               height: 52.0,
               decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
+                color: Colors.deepOrange,
                 borderRadius: BorderRadius.circular(40.0),
               ),
               child: Center(

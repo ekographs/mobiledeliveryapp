@@ -12,6 +12,7 @@ class _LoginPageState extends  State<LoginPage>{
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 15.0),
         child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget> [
             Text("Sign In", style: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold,),),
           ],
