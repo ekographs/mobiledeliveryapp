@@ -48,7 +48,7 @@ class _LoginPageState extends  State<LoginPage>{
                     padding: EdgeInsets.all(30),
                     child: Column(
                       children: <Widget>[
-                        SizedBox(height: 62.0,),
+                        SizedBox(height: 60.0,),
                       Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
@@ -70,7 +70,7 @@ class _LoginPageState extends  State<LoginPage>{
                               child: TextField(
                                 decoration: InputDecoration(
                                   hintText: "Username or Email",
-                                  hintStyle: TextStyle(color: Colors.grey),
+                                  hintStyle: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 18.0),
                                   border: InputBorder.none
                                 ),
                               ),
@@ -83,20 +83,56 @@ class _LoginPageState extends  State<LoginPage>{
                               child: TextField(
                                 decoration: InputDecoration(
                                     hintText: "Password",
-                                    hintStyle: TextStyle(color: Colors.grey),
+                                    hintStyle: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 18.0),
                                     border: InputBorder.none
                                 ),
                               ),
                             ),
                             SizedBox(height: 45.0,),
-                            Text("Forgot Password ?", style: TextStyle(color: Colors.grey),),
+                            Text("Forgot Password ?", style: TextStyle(color: Colors.grey,fontWeight: FontWeight.bold, fontSize: 14.0),),
                             SizedBox(height: 40,),
                             Container(
-                              height: 40,
+                              height: 50,
+                              margin: EdgeInsets.symmetric(horizontal: 50),
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
                                 color: Colors.deepOrange[900]
                               ),
+                              child: Center(
+                                child: Text("Login", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 30.0), ),
+                              ),
+                            ),
+                            SizedBox(height: 10.0,),
+                            Text("Sign In with Socials", style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 18.0),),
+                            SizedBox(height: 30,),
+                            Row(
+                              children: <Widget> [
+                                Expanded(
+                                  child: Container(
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(50),
+                                      color: Colors.black87
+                                    ),
+                                    child: Center(
+                                      child: Text("Github", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18.0), ),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(width: 35,),
+                                Expanded(
+                                  child: Container(
+                                    height: 40,
+                                    decoration: BoxDecoration(
+                                        borderRadius: BorderRadius.circular(50),
+                                        color: Colors.blue
+                                    ),
+                                    child: Center(
+                                      child: Text("Facebook", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 18.0), ),
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
