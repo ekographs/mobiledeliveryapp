@@ -85,7 +85,7 @@ class _LoginPageState extends  State<LoginPage>{
            Row(
              mainAxisAlignment: MainAxisAlignment.center,
              children: <Widget>[
-               Text("Don't have an account yet?", style: TextStyle(color: Colors.grey, fontSize: 18,),),
+               Text("Don't have an account yet?", style: TextStyle(color: Color(0xFF585757), fontSize: 18,),),
                SizedBox(width: 10.0,),
                Text("Sign up here", style: TextStyle(color: Colors.lightBlue, fontSize: 18,),),
              ],
