@@ -1,3 +1,4 @@
+import 'package:deliverysystem/src/pages/login_page.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget{
@@ -12,12 +13,23 @@ class _RegisterPageState extends  State<RegisterPage>{
   Widget _buildEmailTextField() {
     return TextFormField(
       decoration: InputDecoration(
-        hintText: "Username or Email",
+        hintText: "Email",
         hintStyle: TextStyle(
             color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 18.0),
       ),
     );
   }
+
+  Widget _buildUsernameTextField() {
+    return TextFormField(
+      decoration: InputDecoration(
+        hintText: "Username",
+        hintStyle: TextStyle(
+            color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 18.0),
+      ),
+    );
+  }
+
   Widget _buildPasswordTextField(){
     return TextFormField(
       decoration: InputDecoration(
@@ -36,6 +48,23 @@ class _RegisterPageState extends  State<RegisterPage>{
     );
   }
 
+  Widget _buildConfirmPasswordTextField(){
+    return TextFormField(
+      decoration: InputDecoration(
+        hintText: " Confirm Password",
+        hintStyle: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 18.0),
+        suffixIcon: IconButton(
+          onPressed: (){
+            setState(() {
+              _toggleVisibility = !_toggleVisibility;
+            });
+          },
+          icon:  _toggleVisibility? Icon(Icons.visibility_off_outlined) : Icon(Icons.visibility),
+        ),
+      ),
+      obscureText:  _toggleVisibility,
+    );
+  }
 
   @override
   Widget build(BuildContext context){
@@ -47,7 +76,7 @@ class _RegisterPageState extends  State<RegisterPage>{
           children: <Widget> [
             Text("Hi There, kindly ", style: TextStyle(color: Colors.black87, fontSize: 18),),
             Text("Register", style: TextStyle(color: Colors.black87, fontSize: 45),),
-            SizedBox(height: 100.0,),
+            SizedBox(height: 30.0,),
             // Row(
             //   mainAxisAlignment: MainAxisAlignment.end,
             //   children: <Widget>[
@@ -62,14 +91,18 @@ class _RegisterPageState extends  State<RegisterPage>{
                 child: Column(
                   children: <Widget> [
                     _buildEmailTextField(),
-                    SizedBox(height: 20.0,),
+                    SizedBox(height: 10.0,),
+                    _buildUsernameTextField(),
+                    SizedBox(height: 10.0,),
                     _buildPasswordTextField(),
+                    SizedBox(height: 10.0,),
+                    _buildConfirmPasswordTextField(),
 
                   ],
                 ),
               ),
             ),
-            SizedBox(height: 30.0,),
+            SizedBox(height: 50.0,),
             Container(
               height: 50.0,
               margin: EdgeInsets.symmetric(horizontal: 80),
@@ -87,7 +120,13 @@ class _RegisterPageState extends  State<RegisterPage>{
               children: <Widget>[
                 Text("Already have an account?", style: TextStyle(color: Color(0xFF585757), fontSize: 18,),),
                 SizedBox(width: 10.0,),
-                Text("Login here", style: TextStyle(color: Colors.lightBlue, fontSize: 18,),),
+                GestureDetector(
+                    onTap: (){
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
+                    },
+                    child: Text("Login here", style: TextStyle(color: Colors.lightBlue, fontSize: 18,)
+                      ,)
+                ),
               ],
             ),
           ],
