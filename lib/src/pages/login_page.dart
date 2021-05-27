@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../pages/register_page.dart';
 
 class LoginPage extends StatefulWidget{
   @override
@@ -87,12 +88,17 @@ class _LoginPageState extends  State<LoginPage>{
              children: <Widget>[
                Text("Don't have an account yet?", style: TextStyle(color: Color(0xFF585757), fontSize: 18,),),
                SizedBox(width: 10.0,),
-               Text("Sign up here", style: TextStyle(color: Colors.lightBlue, fontSize: 18,),),
+               GestureDetector(
+                 onTap: (){
+                   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => RegisterPage()));
+                 },
+                   child: Text("Sign up here", style: TextStyle(color: Colors.lightBlue, fontSize: 18,)
+                     ,)
+               ),
              ],
            ),
          ],
        ),
-
      ),
     );
 

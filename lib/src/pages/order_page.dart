@@ -97,9 +97,10 @@ Widget _BuildCartTotal(){
             },
             child: Container(
               height: 60.0,
+              margin: EdgeInsets.symmetric(horizontal: 80),
               decoration: BoxDecoration(
                 color: Colors.deepOrange,
-                borderRadius: BorderRadius.circular(70.0),
+                borderRadius: BorderRadius.circular(20.0),
               ),
               child: Center(
                 child: Text("Proceed to Checkout",
