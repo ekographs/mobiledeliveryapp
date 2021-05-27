@@ -9,6 +9,7 @@ class RegisterPage extends StatefulWidget{
 class _RegisterPageState extends  State<RegisterPage>{
 
   bool _toggleVisibility = true;
+  bool _toggleConfirmPVisibility = true;
 
   Widget _buildEmailTextField() {
     return TextFormField(
@@ -56,19 +57,20 @@ class _RegisterPageState extends  State<RegisterPage>{
         suffixIcon: IconButton(
           onPressed: (){
             setState(() {
-              _toggleVisibility = !_toggleVisibility;
+              _toggleConfirmPVisibility = !_toggleConfirmPVisibility;
             });
           },
-          icon:  _toggleVisibility? Icon(Icons.visibility_off_outlined) : Icon(Icons.visibility),
+          icon:  _toggleConfirmPVisibility? Icon(Icons.visibility_off_outlined) : Icon(Icons.visibility),
         ),
       ),
-      obscureText:  _toggleVisibility,
+      obscureText:  _toggleConfirmPVisibility,
     );
   }
 
   @override
   Widget build(BuildContext context){
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 10.0),
         child: Column(
@@ -77,12 +79,6 @@ class _RegisterPageState extends  State<RegisterPage>{
             Text("Hi There, kindly ", style: TextStyle(color: Colors.black87, fontSize: 18),),
             Text("Register", style: TextStyle(color: Colors.black87, fontSize: 45),),
             SizedBox(height: 30.0,),
-            // Row(
-            //   mainAxisAlignment: MainAxisAlignment.end,
-            //   children: <Widget>[
-            //     Text("forgot password?", style: TextStyle(color: Colors.blue, fontSize: 18, fontWeight: FontWeight.bold), ),
-            //   ],
-            // ),
             SizedBox(height: 10.0,),
             Card(
               elevation: 7.0,
